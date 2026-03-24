@@ -101,3 +101,7 @@ core.*
 *.log !run.log
 *.pyc
 Depends
+
+# Python notebook checkpoints
+.ipynb_checkpoints
+
