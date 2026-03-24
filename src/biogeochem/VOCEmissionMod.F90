@@ -609,8 +609,9 @@ contains
              gamma = gamma_l * gamma_sm * gamma_a * gamma_p * gamma_T * gamma_c
 
              if ( (gamma >=0.0_r8) .and. (gamma< 100._r8) ) then
-
-                vocflx_meg(imeg) =  meg_cmp%coeff * epsilon * gamma * megemis_units_factor / meg_cmp%molec_weight ! moles/m2/sec
+                ! meg_cmp%coeff doesn't exist and apparently isn't needed
+                ! vocflx_meg(imeg) =  meg_cmp%coeff * epsilon * gamma * megemis_units_factor / meg_cmp%molec_weight ! moles/m2/sec
+                vocflx_meg(imeg) =  epsilon * gamma * megemis_units_factor / meg_cmp%molec_weight ! moles/m2/sec
 
                 ! assign to arrays for history file output (not weighted by landfrac)
                 meg_out(imeg)%flux_out(p) = meg_out(imeg)%flux_out(p) &
