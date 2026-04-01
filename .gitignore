@@ -116,6 +116,3 @@ Depends
 _build*/
 _publish*/
 doc/.coverage
-
-# Python notebook checkpoints
-.ipynb_checkpoints
